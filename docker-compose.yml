@@ -1,0 +1,13 @@
+services:
+    server:
+        build: ./server
+        ports: 
+            - 5050:5000
+        command: npm run dev
+    mongodb:
+        image: mongo
+    client:
+        build: ./client
+        ports: 
+            - 8080:3000
+        command: npm start
